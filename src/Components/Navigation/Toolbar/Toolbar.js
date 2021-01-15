@@ -6,13 +6,14 @@ import DrawerToogle from "../Sidedrawer/DrawerToogle/DrawerToogle"
 
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <DrawerToogle clicked={props.drawerToogleClicked}/>
+        <DrawerToogle clicked={props.drawerToogleClicked} />
         <div className={classes.Logo}>
             <Logo />
         </div>
 
         <nav className={classes.DesktopOnly}>
-            <NavigationItems />
+            <NavigationItems
+                isAuthenticated={props.isAuth} />
         </nav>
     </header>
 );
